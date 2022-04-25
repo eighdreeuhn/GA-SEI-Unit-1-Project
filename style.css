@@ -4,10 +4,17 @@ body {
 
 header{
     display: grid;
+    grid-template-columns: 2fr 2fr;
+}
+
+#name {
+}
+header h1 {
+
 }
 
 header nav {
-
+    justify-items: right;
 }
 
 nav ul {

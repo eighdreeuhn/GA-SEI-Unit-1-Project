@@ -1,0 +1,33 @@
+body {
+
+}
+
+header{
+    display: grid;
+}
+
+header nav {
+
+}
+
+nav ul {
+
+}
+
+nav ul li {
+
+}
+
+#wrapper {
+    display: grid;
+}
+
+.box {
+    border: 1px solid rgb(21, 19, 19);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+footer  {
+
+}

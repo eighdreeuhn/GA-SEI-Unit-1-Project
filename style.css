@@ -1,40 +1,120 @@
 body {
-
+    
 }
 
 header{
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 1fr 1fr;
+    background-color: black;
+    color: white;
+
 }
 
 #name {
+
 }
+
 header h1 {
 
 }
 
 header nav {
-    justify-items: right;
 }
 
 nav ul {
-
 }
 
 nav ul li {
 
 }
 
-#wrapper {
+#box-wrapper {
     display: grid;
+    grid-template-rows: repeat(13, 1fr);
+    grid-template-columns: repeat(13, 1fr);
+    width: 1000px;
+    height: 1000px;
+    margin: 25px;
+    gap: 5px;
 }
+
+@keyframes fadein {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+  }
 
 .box {
     border: 1px solid rgb(21, 19, 19);
-    border-radius: 3px;
+    border-radius: 7%;
     cursor: pointer;
+    animation:infinite;
+    
+    
+}
+
+#box-1 {
+    display: flex;
+    grid-area: 7 / 4 / 6 / 5;
+    background-color: red;
+    animation: fadein 1000ms;
+}
+
+#box-2 {
+    display: flex;
+    grid-area: 6/ 5 / 7 / 6;
+    background-color: orange;
+    animation: fadein 1200ms;
+}
+
+#box-3 {
+    display: flex;
+    grid-area: 7 / 6 / 9 / 4;
+    background-color: yellow;
+    animation: fadein 1100ms;
+}
+
+#box-4 {
+    display: flex;
+    grid-area: 9 / 4 / 6 / 1;
+    background-color: green;
+    animation: fadein 900ms;
+}
+
+#box-5 {
+    grid-area: 6 / 1 / 1 / 6;
+    background-color: blue;
+    animation: fadein 1200ms;
+}
+
+#box-6 {
+    grid-area: 1 / 6 / 9 / 14;
+    background-color: indigo;
+    animation: fadein 1700ms;
+}
+
+#box-7 {
+    grid-area: 9 / 6 / 11 / 7;
+    background-color: violet;
+    animation: fadein 2500ms;
+}
+
+
+
+.popout-screen {
+    display: flex;
 }
 
 footer  {
+    display: grid;
+    grid-template-columns: 2fr;
+    height: 100px;
+}
+
+@media screen and (max-width: 768px) {
+    
+}
+
+@media screen and (max-width: 425px) {
+    
 
 }

@@ -7,11 +7,16 @@ $(document).ready(() => {
     $("#box-1").on('click', function(event) {
         $("#box-6").toggleClass("box-1");
     })
-    $("#box-2").on('click', function() {
-        
+    $("#box-2").on('click', function(event) {
+        $("#box-6").toggleClass("box-2");
     })
-
-    $(".menu-box, .box").on('click', (event) =>{ 
-        console.log('working')
+    $("#box-3").on('click', function(event) {
+        $("#box-6").toggleClass("box-3");
+    })
+    $("#box-4").on('click', function(event) {
+        $("#box-6").toggleClass("box-4");
+    })
+    $("#box-5").on('click', function(event) {
+        $("#box-6").toggleClass("box-5");
     })
 });

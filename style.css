@@ -11,6 +11,8 @@ header{
     background-color: black;
     color: white;
     border-radius: 10px;
+    margin-left: 10%;
+    margin-right: 25px;
 
 }
 header h1 {
@@ -46,10 +48,21 @@ nav ul li {
     gap: 10px;
 }
 
-#viewer-screen {
-    display: flex;
-    grid-area: 6 / 10 / 14 / 2;
+@keyframes fadein {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+  }
 
+#box-6 > .viewer-screen {
+    display: flex;
+    background-color:rgb(255, 255, 255);
+    text-align: center;
+}
+
+.viewer-screen > p {
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 50px;
 }
 
 @keyframes fadein {
@@ -57,15 +70,18 @@ nav ul li {
     to {opacity: 100%;}
   }
 
-.box, .menu-box {
+.box {
     display: flex;
     border: 2px solid rgb(21, 19, 19);
+    background-color: rgb(86, 3, 3);
+    color: white;
     border-radius: 7%;
     animation:infinite;
+    cursor: pointer;
 }
 
-.menu-box {
-    cursor: pointer;
+.dimmed {
+    opacity: unset;
 }
 
 #box-1 {
@@ -98,12 +114,6 @@ nav ul li {
     animation: fadein 1700ms;
 }
 
-
-
-.box-1 {
-    
-}
-
 footer  {
     display: grid;
     grid-template-columns: 2fr;
@@ -111,7 +121,8 @@ footer  {
     width: 400px;
     justify-self: right;
     border-radius: 10px;;
-    background-color: black;;
+    background-color: black;
+    margin: 0px 10% 5% 0;
 }
 
 @media screen and (min-width: 426px) {
@@ -141,7 +152,8 @@ footer  {
         width: 1000px;
         height: 700px;
         grid-template-rows: repeat(10, 1fr);
-    grid-template-columns: repeat(14, 1fr);
+        grid-template-columns: repeat(14, 1fr);
+        gap: 25px;
 
     }
 

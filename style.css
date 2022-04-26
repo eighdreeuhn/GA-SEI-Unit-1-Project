@@ -1,5 +1,7 @@
 body {
-    
+    display: grid;
+    grid-template-rows: auto auto auto;
+    width: 100%;
 }
 
 header{
@@ -7,7 +9,11 @@ header{
     grid-template-columns: 1fr 1fr;
     background-color: black;
     color: white;
+    border-radius: 10px;
 
+}
+header h1 {
+    margin: 20px auto 5px 20px;
 }
 
 #name {
@@ -32,10 +38,12 @@ nav ul li {
     display: grid;
     grid-template-rows: repeat(13, 1fr);
     grid-template-columns: repeat(13, 1fr);
-    width: 1000px;
+    justify-content: center;
+
     height: 1000px;
-    margin: 25px;
-    gap: 5px;
+    width: 1000px;
+    margin: 25px auto 0px auto;
+    gap: 10px;
 }
 
 @keyframes fadein {
@@ -43,78 +51,91 @@ nav ul li {
     to {opacity: 100%;}
   }
 
-.box {
+.box, .menu-box {
+    display: flex;
     border: 1px solid rgb(21, 19, 19);
     border-radius: 7%;
-    cursor: pointer;
     animation:infinite;
-    
-    
+}
+
+.menu-box {
+    cursor: pointer;
 }
 
 #box-1 {
-    display: flex;
-    grid-area: 7 / 4 / 6 / 5;
-    background-color: red;
+    grid-area: 4 / 3 / 5 / 4;
+    background-color: rgb(110, 52, 52);
     animation: fadein 1000ms;
 }
 
 #box-2 {
-    display: flex;
-    grid-area: 6/ 5 / 7 / 6;
-    background-color: orange;
+    grid-area: 5 / 4 / 6 / 3;
+    background-color: rgb(123, 103, 66);
     animation: fadein 1200ms;
 }
 
 #box-3 {
-    display: flex;
-    grid-area: 7 / 6 / 9 / 4;
-    background-color: yellow;
+    grid-area: 6 / 3 / 4 / 1;
+    background-color: rgb(104, 104, 55);
     animation: fadein 1100ms;
 }
 
 #box-4 {
-    display: flex;
-    grid-area: 9 / 4 / 6 / 1;
-    background-color: green;
+    grid-area: 4 / 1 / 1 / 4;
+    background-color: rgb(50, 81, 50);
     animation: fadein 900ms;
 }
 
 #box-5 {
-    grid-area: 6 / 1 / 1 / 6;
-    background-color: blue;
+    grid-area: 1 / 4 / 6 / 9;
+    background-color: rgb(47, 47, 78);
     animation: fadein 1200ms;
 }
 
 #box-6 {
-    grid-area: 1 / 6 / 9 / 14;
-    background-color: indigo;
+    grid-area: 6 / 9 / 14 / 1;
+    background-color: rgb(75, 54, 90);
     animation: fadein 1700ms;
 }
 
 #box-7 {
-    grid-area: 9 / 6 / 11 / 7;
+    grid-area: 9 / 14 / 14 / 1;
     background-color: violet;
     animation: fadein 2500ms;
 }
 
 
 
-.popout-screen {
+.viewer-screen {
     display: flex;
+}
+
+.box-1 {
+    
 }
 
 footer  {
     display: grid;
     grid-template-columns: 2fr;
     height: 100px;
-}
-
-@media screen and (max-width: 768px) {
-    
+    background-color: black;;
 }
 
 @media screen and (max-width: 425px) {
-    
+    header {
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr;
+    }
+    #wrapper {
+        width: 425px;
+        height: 425px;
+    }
 
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr;
+    }
 }

@@ -7,18 +7,36 @@ body {
 
 header {
     display: grid;
-    background-color: rgb(7, 7, 7);
-    border: 2px solid rgb(255, 78, 78);
+    margin-top: 5px;
     color: rgb(254, 254, 254);
-    border-radius: 10px;
+    
 }
 
+header #name {
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(255, 78, 78);
+}
 #social {
+    justify-content: right;
     display: none;
  }
 
+ #social span {
+     width: 70px;
+ }
+
+ #github {
+     width: 75%;
+     padding: 3px;
+ }
+
+ #linkedin {
+     width: 80%;
+ }
+
 header h2 {
-    margin: 10px auto 5px 20px;
+    margin: 20px auto 5px 20px;
 }
 
 @keyframes blinker {
@@ -68,7 +86,7 @@ nav ul li {
 @keyframes dimmer {
     
     0% {opacity: 100%;}
-    50% {opacity: 40%
+    50% {opacity: 40%;}
     100% {opacity: 20%;}
   }
 
@@ -82,7 +100,7 @@ nav ul li {
 div #box-6.box.snow-screen {
     display: grid;
     grid-template: repeat(24, 1fr) / repeat(24, 1fr);
-    border-radius: 7%;
+    /* border-radius: 7%; */
 }
 
 .box {
@@ -100,14 +118,16 @@ div #box-6.box.snow-screen {
 
 @keyframes fadein {
     
-    from {opacity: 0%;}
-    to {opacity: 100%;}
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
   }
   
 
 #box-1 {
     grid-area: 4 / 4 / 5 / 5;
+    animation: dimmed 500ms;
     animation: fadein 1000ms;
+    
 }
 
 #box-2 {
@@ -133,12 +153,15 @@ div #box-6.box.snow-screen {
 #box-6 {
     grid-area: 6 / 10 / 14 / 2;
     animation: fadein 2000ms;
-    border-radius: 7%;
+    text-align: center;
+    color: rgb(13, 13, 12);
 }
 
 footer  {
-    display: flex;
+
+    display: grid;
     justify-self: center;
+    grid-template-columns: repeat(4, 1fr);
     height: 100px;
     width: 400px;
     border-radius: 10px;;
@@ -152,37 +175,32 @@ footer  {
     #social {
         display: none;
      }
-    header {
-      margin-right: 0%;
-    }
     #box-wrapper {
         width: 768px;
         height: 900px;
     }
-
-    
-
 }
-
 @media screen and (min-width: 768px) {
     
     header {
-        width: 768px;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 2fr 1fr;
     }
-
+    header #name {
+        display: flex;
+    }    
     #social {
-       justify-content: right;
+        display: flex;
+        justify-content: right;
     }
 
     #box-wrapper {
         width: 1000px;
-        height: 700px;
-        grid-template-rows: repeat(10, 1fr);
-        grid-template-columns: repeat(14, 1fr);
+        height: 533px;
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-columns: repeat(15, 1fr);
         gap: 25px;
-
     }
+
 
     #box-1 {
         grid-area: 7 / 5 / 6 / 6;
@@ -212,5 +230,8 @@ footer  {
     #box-6 {
         grid-area: 1 / 7 / 9 / 15;
         animation: fadein 1800ms;
+    }
+    footer {
+        
     }
 }

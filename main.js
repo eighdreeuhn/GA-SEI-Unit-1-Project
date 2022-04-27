@@ -21,6 +21,7 @@ const static = function() {
 }
 
 $('#box-1').on('click', function() {
+    $("#box-1").toggleClass("dimmed");
     $(".viewer-screen > p").text('');
     $(".snow-screen").children(".pixel").remove();
     $("#box-6").toggleClass("viewer-screen snow-screen");
@@ -61,3 +62,4 @@ $("header").on('hover', (event) => {
 })
 // snowScreen();
 static();
+$("#box-6.box.snow-screen").css("border", "none");

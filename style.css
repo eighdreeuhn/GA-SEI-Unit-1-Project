@@ -18,21 +18,7 @@ header #name {
     border: 2px solid rgb(255, 78, 78);
 }
 #social {
-    justify-content: right;
     display: none;
- }
-
- #social span {
-     width: 70px;
- }
-
- #github {
-     width: 75%;
-     padding: 3px;
- }
-
- #linkedin {
-     width: 80%;
  }
 
 header h2 {
@@ -94,7 +80,6 @@ nav ul li {
     font-size: 20px;
     padding: 10px;
     margin-top: 50px;
-    border-radius: 7%;
 }
 
 div #box-6.box.snow-screen {
@@ -113,7 +98,13 @@ div #box-6.box.snow-screen {
 }
 
 .dimmed {
-    animation: dimmer 500ms;
+    border: 2px solid rgb(255, 78, 78);
+    background-color: rgb(123, 128, 121);
+    opacity: 20%;
+    text-align: center;
+    color: rgb(13, 13, 12);
+    border-radius: 7%;
+    cursor: none;
 }
 
 @keyframes fadein {
@@ -125,7 +116,6 @@ div #box-6.box.snow-screen {
 
 #box-1 {
     grid-area: 4 / 4 / 5 / 5;
-    animation: dimmed 500ms;
     animation: fadein 1000ms;
     
 }
@@ -161,13 +151,57 @@ footer  {
 
     display: grid;
     justify-self: center;
-    grid-template-columns: repeat(4, 1fr);
-    height: 100px;
+    grid-template-columns: repeat(4, 100px);
+    height: 50px;
     width: 400px;
     border-radius: 10px;;
     background-color: black;
     border: 2px solid rgb(255, 78, 78);
     margin: 0 0% 5% 0;
+}
+
+footer span {
+    justify-self: center;
+}
+#github-footer {
+    display: flex;
+    grid-column-end: inherit;
+}
+
+#github {
+    max-height: 30px;
+    object-fit: cover;
+}
+
+#linkedin-footer {
+    display: flex;
+    grid-column-end: inherit;
+}
+
+#linkedin {
+    max-height: 30px;
+    padding-top:5px;
+}
+
+
+#contact-footer {
+    display: flex;
+    grid-column-end: inherit;
+}
+
+#contact {
+    max-height: 30px;
+    object-fit: cover;
+}
+
+#message-footer {
+    display: flex;
+    grid-column-end: inherit;
+}
+
+#message {
+    max-height: 30px;
+    object-fit: cover;
 }
 
 @media screen and (min-width: 426px) {
@@ -191,6 +225,16 @@ footer  {
     #social {
         display: flex;
         justify-content: right;
+    }
+
+    #github {
+        width: 20%;
+        padding: 3px;
+    }
+
+    #linkedin {
+        width: 75%;
+        padding-top:3px;
     }
 
     #box-wrapper {
@@ -231,6 +275,15 @@ footer  {
         grid-area: 1 / 7 / 9 / 15;
         animation: fadein 1800ms;
     }
+
+    #github-footer {
+        display: none;
+    }
+
+    #linkedin-footer{
+        display: none;
+    }
+
     footer {
         
     }

@@ -21,13 +21,14 @@ const static = function() {
 }
 
 $('#box-1').on('click', function() {
-    $("#box-1").toggleClass("dimmed");
+    $("#box-2, #box-3, #box-3, #box-4, #box-5").toggleClass("box dimmed");
     $(".viewer-screen > p").text('');
     $(".snow-screen").children(".pixel").remove();
     $("#box-6").toggleClass("viewer-screen snow-screen");
     $(".viewer-screen").append("<p>Here is where I'm going to talk an incredible bunch of nonsense about how accomplished a developer I am.</p>");
 })
 $("#box-2").on('click', function() {
+    $("#box-1, #box-3, #box-3, #box-4, #box-5").toggleClass("box dimmed");
     $(".viewer-screen > p").text('');
     $(".snow-screen").children(".pixel").remove();
     $("#box-6").toggleClass("viewer-screen snow-screen");
@@ -35,18 +36,21 @@ $("#box-2").on('click', function() {
 
 })
 $("#box-3").on('click', function() {
+    $("#box-1, #box-2, #box-4, #box-5").toggleClass("box dimmed");
     $(".viewer-screen > p").text('');
     $(".snow-screen").children(".pixel").remove();
     $("#box-6").toggleClass("viewer-screen snow-screen");
     $(".viewer-screen").append("<p>My stars! The awards I've received... Don't get me started.</p>");
 })
 $("#box-4").on('click', function() {
+    $("#box-1, #box-2, #box-3, #box-5").toggleClass("box dimmed");
     $(".viewer-screen > p").text('');
     $(".snow-screen").children(".pixel").remove();
     $("#box-6").toggleClass("viewer-screen snow-screen");
     $(".viewer-screen").append("<p>My stars! The awards I've received... Don't get me started.</p>");
 })
 $("#box-5").on('click', function() {
+    $("#box-1, #box-2, #box-3, #box-4").toggleClass("box dimmed");
     $(".viewer-screen > p").text('');
     $(".snow-screen").children(".pixel").remove();
     $("#box-6").toggleClass("viewer-screen snow-screen");

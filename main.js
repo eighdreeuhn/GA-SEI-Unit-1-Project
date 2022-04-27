@@ -57,8 +57,9 @@ $("#box-5").on('click', function() {
     $(".viewer-screen").append("<p>JavaScript, Jquery, HTML, CSS, some Python, Espanol, Un po' d'Italiano,　ちょっと日本語</p>");
  })
 
- $("#message").on('click', '#contact-sheet', function(event) {
-
+ $("#message").on('click',  function() {
+    $("#contact-sheet").toggleClass("hidden shown");
+    $(".box").toggleClass("dimmed");
  })
 
 $('#box-1').on('hover', function(event) {

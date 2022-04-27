@@ -7,6 +7,7 @@ body {
 
 header {
     display: grid;
+    width: 85%;
     margin-top: 5px;
     color: rgb(254, 254, 254);
     
@@ -35,17 +36,20 @@ header h2 {
 }
 
 .removable-sheet {
-    display: none;
+    z-index: 1;
+    display: flex;
 }
 
+.hidden {
+    opacity: 0%;
+}
+
+.shown {
+    background-color:rgb(43, 43, 43);
+    opacity: 90%;
+}
 header nav {
-}
-
-nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
+    display: none;
 }
 
 #box-wrapper {
@@ -197,6 +201,7 @@ footer span {
 #message {
     max-height: 30px;
     padding-top: 10px;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 426px) {
@@ -216,12 +221,20 @@ footer span {
     }
     header #name {
         display: flex;
-    }    
-    /* #social {
-        display: flex;
-        justify-content: right;
-    } */
+    }
 
+    nav ul {
+        display: flex;
+        list-style-type: none;
+        align-items: flex-start;
+        align-content: space-between;
+    }
+    
+    nav ul li {
+        margin: 0px 8px;
+        height: 10px
+    }
+    
     #box-wrapper {
         width: 1000px;
         height: 533px;

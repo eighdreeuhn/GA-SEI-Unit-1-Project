@@ -17,9 +17,6 @@ header #name {
     background-color: rgb(0, 0, 0);
     border: 2px solid rgb(255, 78, 78);
 }
-#social {
-    display: none;
- }
 
 header h2 {
     margin: 20px auto 5px 20px;
@@ -61,8 +58,6 @@ nav ul li {
     margin: 25px auto 25px auto;
     gap: 10px;
 }
-
-
 
 .viewer-screen {
     display: flex;
@@ -166,11 +161,11 @@ footer span {
 #github-footer {
     display: flex;
     grid-column-end: inherit;
+    padding-top: 10px;
 }
 
 #github {
     max-height: 30px;
-    object-fit: cover;
 }
 
 #linkedin-footer {
@@ -180,7 +175,7 @@ footer span {
 
 #linkedin {
     max-height: 30px;
-    padding-top:5px;
+    padding-top:10px;
 }
 
 
@@ -191,7 +186,7 @@ footer span {
 
 #contact {
     max-height: 30px;
-    object-fit: cover;
+    padding-top: 10px;
 }
 
 #message-footer {
@@ -201,7 +196,7 @@ footer span {
 
 #message {
     max-height: 30px;
-    object-fit: cover;
+    padding-top: 10px;
 }
 
 @media screen and (min-width: 426px) {
@@ -222,20 +217,10 @@ footer span {
     header #name {
         display: flex;
     }    
-    #social {
+    /* #social {
         display: flex;
         justify-content: right;
-    }
-
-    #github {
-        width: 20%;
-        padding: 3px;
-    }
-
-    #linkedin {
-        width: 75%;
-        padding-top:3px;
-    }
+    } */
 
     #box-wrapper {
         width: 1000px;
@@ -274,17 +259,5 @@ footer span {
     #box-6 {
         grid-area: 1 / 7 / 9 / 15;
         animation: fadein 1800ms;
-    }
-
-    #github-footer {
-        display: none;
-    }
-
-    #linkedin-footer{
-        display: none;
-    }
-
-    footer {
-        
     }
 }

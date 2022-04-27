@@ -4,7 +4,7 @@ const snowScreen = function() {
     $(".snow-screen").children("p").remove();
         for (let i = 0; i < 24; i++) {
             for (let j = 0; j < 24; j++) { 
-             $("#box-6.box.snow-screen").append(generatePixel);
+             $("#box-6.snow-screen").append(generatePixel);
          }
         }
 }
@@ -21,7 +21,7 @@ const static = function() {
 }
 
 $('#box-1').on('click', function() {
-    $("#box-2, #box-3, #box-3, #box-4, #box-5").toggleClass("box dimmed");
+    $("#box-2, #box-3, #box-3, #box-4, #box-5").toggleClass("dimmed");
     $(".viewer-screen > p").text('');
     $(".snow-screen").children(".pixel").remove();
     $("#box-6").toggleClass("viewer-screen snow-screen");
@@ -71,4 +71,4 @@ $("header > #name").on('hover', (event) => {
 })
 // snowScreen();
 static();
-$("#box-6.box.snow-screen").css("border", "none");
+$("#box-6.snow-screen").css("border", "none");

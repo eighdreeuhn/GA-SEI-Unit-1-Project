@@ -20,7 +20,7 @@ header #name {
 }
 
 header h2 {
-    margin: 20px auto 5px 20px;
+    margin: 10px auto 5px 20px;
 }
 
 @keyframes blinker {
@@ -81,7 +81,7 @@ header nav {
     margin-top: 50px;
 }
 
-div #box-6.box.snow-screen {
+div #box-6.snow-screen {
     display: grid;
     grid-template: repeat(24, 1fr) / repeat(24, 1fr);
     /* border-radius: 7%; */
@@ -114,36 +114,36 @@ div #box-6.box.snow-screen {
   
 
 #box-1 {
-    grid-area: 4 / 4 / 5 / 5;
+    grid-area: 11 / 2 / 13 / 4;
     animation: fadein 1000ms;
     
 }
 
 #box-2 {
-    grid-area: 5 / 5 / 6 / 4;
+    grid-area: 11 / 5 / 13 / 7;
     animation: fadein 1200ms;
 }
 
 #box-3 {
-    grid-area: 6 / 4 / 4 / 2;
+    grid-area: 11 / 8 / 13 / 10;
     animation: fadein 1400ms;
 }
 
 #box-4 {
-    grid-area: 4 / 2 / 1 / 5;
+    grid-area: 13 / 3 / 15 / 5;
     animation: fadein 1600ms;
 }
 
 #box-5 {
-    grid-area: 1 / 5 / 6 / 10;
+    grid-area: 13 / 7 / 15 / 9;
     animation: fadein 1800ms;
 }
 
 #box-6 {
-    grid-area: 6 / 10 / 14 / 2;
-    animation: fadein 2000ms;
+    grid-area: 2 / 2 / 10 / 10;
     text-align: center;
     color: rgb(13, 13, 12);
+    animation: fadein 2000ms;
 }
 
 footer  {
@@ -239,38 +239,38 @@ footer span {
         width: 1000px;
         height: 533px;
         grid-template-rows: repeat(8, 1fr);
-        grid-template-columns: repeat(15, 1fr);
+        grid-template-columns: repeat(14, 1fr);
         gap: 25px;
     }
 
 
     #box-1 {
-        grid-area: 7 / 5 / 6 / 6;
+        grid-area: 2 / 2 / 4 / 4;
         animation: fadein 1000ms;
     }
     
     #box-2 {
-        grid-area: 6 / 6 / 7 / 7;
+        grid-area: 2 / 4 / 4 / 6;
         animation: fadein 1200ms;
     }
     
     #box-3 {
-        grid-area: 7 / 7 / 9 / 5;
+        grid-area: 4 / 2 / 6 / 4;
         animation: fadein 1400ms;
     }
     
     #box-4 {
-        grid-area: 9 / 5 / 6 / 2;
+        grid-area: 4 / 4 / 6 / 6;
         animation: fadein 1600ms;
     }
     
     #box-5 {
-        grid-area: 6 / 2 / 1 / 7;
+        grid-area: 6 / 3 / 8 / 5;
         animation: fadein 2000ms;
     }
     
     #box-6 {
-        grid-area: 1 / 7 / 9 / 15;
+        grid-area: 1 / 6 / 9 / 14;
         animation: fadein 1800ms;
     }
 }

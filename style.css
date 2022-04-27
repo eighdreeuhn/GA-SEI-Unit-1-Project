@@ -69,7 +69,7 @@ header nav {
 }
 
 .viewer-screen {
-    display: flex;
+    display: grid;
     background-color:rgb(254, 254, 254);
 }
 
@@ -90,6 +90,9 @@ div #box-6.snow-screen {
     grid-template: repeat(24, 1fr) / repeat(24, 1fr);
 }
 
+div #box-6.about {
+    background-image: url('Heiroglyphics_face.jpg');
+}
 .box {
     border: 2px solid rgb(154, 29, 29);
     background-color: rgb(225, 241, 218);

@@ -20,12 +20,19 @@ const static = function() {
     setInterval(snowScreen, 10);
 }
 
+
+// Button catergory jQeury objects declared here:
+// let $about = $("<div class='about'</div>");
+
+
+{/* <img src='Heiroglyphics_face.jpg'></img> */}
+
 $('#box-1').on('click', function() {
     $("#box-2, #box-3, #box-3, #box-4, #box-5").toggleClass("dimmed");
     $(".viewer-screen > p").text('');
     $(".snow-screen").children(".pixel").remove();
-    $("#box-6").toggleClass("viewer-screen snow-screen");
-    $(".viewer-screen").append("<p>Here is where I'm going to talk an incredible bunch of nonsense about how accomplished a developer I am.</p>");
+    $("#box-6").toggleClass("viewer-screen snow-screen about");
+    // $(".viewer-screen").append($about);
 })
 $("#box-2").on('click', function() {
     $("#box-1, #box-3, #box-3, #box-4, #box-5").toggleClass("box dimmed");
@@ -71,4 +78,3 @@ $("header > #name").on('hover', (event) => {
 })
 // snowScreen();
 static();
-$("#box-6.snow-screen").css("border", "none");

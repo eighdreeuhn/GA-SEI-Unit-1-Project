@@ -58,8 +58,8 @@ $("#box-5").on('click', function() {
  })
 
  $("#message").on('click',  function() {
-    $("#contact-sheet").toggleClass("hidden shown");
-    $(".box").toggleClass("dimmed");
+    $("#contact-sheet form input").toggleClass("shown");
+    $("#box-wrapper").toggleClass("dimmed");
  })
 
 $('#box-1').on('hover', function(event) {

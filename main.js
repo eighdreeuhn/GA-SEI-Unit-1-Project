@@ -57,12 +57,16 @@ $("#box-5").on('click', function() {
     $(".viewer-screen").append("<p>JavaScript, Jquery, HTML, CSS, some Python, Espanol, Un po' d'Italiano,　ちょっと日本語</p>");
  })
 
+ $("#message").on('click', '#contact-sheet', function(event) {
+
+ })
+
 $('#box-1').on('hover', function(event) {
-        (event.target).text('About');
+        $(event.target).text('About');
 })
 
-$("header").on('hover', (event) => {
-    event.target.css("background-color", "red")
+$("header > #name").on('hover', (event) => {
+    $(event.target).css("background-color", "red")
 })
 // snowScreen();
 static();

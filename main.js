@@ -2,7 +2,6 @@
 
 //Removes the .pixel children from the .snow-screen div and generates a grayscale pixelated screen
 const snowScreen = function() {
-
     $(".snow-screen").children().remove();
         for (let i = 0; i < 24; i++) {
             for (let j = 0; j < 24; j++) { 
@@ -77,7 +76,7 @@ const forFun = function() {
 
 // Eventlisteners built here:
 
-$('#box-1').on('click', function(event) {
+$('#box-1.box').on('click', function(event) {
     if (!$(event.target).hasClass("dimmed")) {
         $("#box-2, #box-3, #box-4, #box-5").toggleClass("dimmed");
         $(".snow-screen").children().remove();

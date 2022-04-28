@@ -1,4 +1,24 @@
 //All functions declared here in the header
+const link = 'https://docs.google.com/spreadsheets/d/11RXPA6fh2GQCeni-7yy4OqrKXia3HE1ScoOFRFssPZk/edit#gid=0"'
+
+const key = 'AIzaSyD5gvCmsvh1nSoAND0u0MN5FO-e-gdrHtk'
+
+const id = "11RXPA6fh2GQCeni-7yy4OqrKXia3HE1ScoOFRFssPZk";
+
+let url = `https://sheets.googleapis.com/v4/spreadsheets/11RXPA6fh2GQCeni-7yy4OqrKXia3HE1ScoOFRFssPZk/values/A1:B1?key=${key}`
+
+const getContent = function() {
+$.ajax({
+    method: "get",
+    url: url
+})
+.then(function(data) {
+    return data.values[0];
+})
+.catch(function() {
+    console.log("nope");
+})
+}
 
 //Removes all .pixel children from .snow-screen div and generates a grayscale pixelated screen
 const snowScreen = function() {
@@ -18,13 +38,16 @@ const generatePixel = function() {
 }
 
 const static = function() {
-    setInterval(snowScreen, 50);
+    setInterval(snowScreen, 200);
+    
 }
 
 const about = function() {
+    const aboutData = getContent();
+    const aboutText = aboutData[1];
     $("div #viewer-screen.about").append("<p>");
     $("div #viewer-screen.about p").css('grid-column-area')
-    $("div #viewer-screen.about p").text("I wrote my first program on a TI-82 graphing calculator and have been fascinated by programming languages and design ever since. A lifelong learner in search of a great organization. I'd love to talk to you!");
+    $("div #viewer-screen.about p").text(`${aboutText}`);
 }
 
 const languages = function() {
@@ -68,18 +91,6 @@ const forFun = function() {
 const clearScreen = function() {
     $(".snow-screen, viewer-screen").children().remove();
 }
-
-// const link = 'https://docs.google.com/spreadsheets/d/11RXPA6fh2GQCeni-7yy4OqrKXia3HE1ScoOFRFssPZk/edit#gid=0"'
-
-// const key = 'AIzaSyD5gvCmsvh1nSoAND0u0MN5FO-e-gdrHtk'
-
-// const id = "11RXPA6fh2GQCeni-7yy4OqrKXia3HE1ScoOFRFssPZk";
-
-// let url = `https://sheets.googleapis.com/v4/spreadsheets/11RXPA6fh2GQCeni-7yy4OqrKXia3HE1ScoOFRFssPZk/values/A1:B1?key=${key}`
-
-// $.ajax({url: url}).then(data => {
-//     console.log(data);
-// })
 
 // Eventlisteners built here:
 

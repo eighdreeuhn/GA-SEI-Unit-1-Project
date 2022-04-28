@@ -62,7 +62,7 @@ header h3 {
     opacity: 90%;
 }
 header nav {
-    /* display: none; */
+    display: none;
 }
 
 #box-wrapper {

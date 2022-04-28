@@ -1,6 +1,6 @@
 //All functions declared here in the header
 
-//Removes the .pixel children from the .snow-screen div and generates a grayscale pixelated screen
+//Removes all .pixel children from .snow-screen div and generates a grayscale pixelated screen
 const snowScreen = function() {
     $(".snow-screen").children().remove();
         for (let i = 0; i < 24; i++) {
@@ -28,12 +28,15 @@ const about = function() {
 }
 
 const languages = function() {
-    $("div #viewer-screen.languages").append("<p><h3></h3></p>");
-    $("div #viewer-screen.languages p").text(`"Typed:"<br>"HTML"<br>"CSS"<br>"JavaScript/$JQuery"<br>"`);
+    $("div #viewer-screen.languages").append("<div><h3>LANGUAGES</h3></div>");
+    $("div #viewer-screen.languages").append("<div><h2>:TYPED:</h2></div>");
+    $("div #viewer-screen.languages").append("<div><h2>HTML  CSS  JavaScript/$JQuery</h2></div>");
+    $("div #viewer-screen.languages").append("<div><h2>:SPOKEN:</h2></div>");
+    $("div #viewer-screen.languages").append("<div><h2>Espanol, Italiano, 日本語</h2></div>");
 }
 
 const portfolio = function() {
-
+    // $("#viewer-screen.portfolio div #project-1").
 }
 
 const accolades = function() {
@@ -62,6 +65,10 @@ const forFun = function() {
     buildBoard();
 }
 
+const clearScreen = function() {
+    $(".snow-screen, viewer-screen").children().remove();
+}
+
 // const link = 'https://docs.google.com/spreadsheets/d/11RXPA6fh2GQCeni-7yy4OqrKXia3HE1ScoOFRFssPZk/edit#gid=0"'
 
 // const key = 'AIzaSyD5gvCmsvh1nSoAND0u0MN5FO-e-gdrHtk'
@@ -76,19 +83,20 @@ const forFun = function() {
 
 // Eventlisteners built here:
 
-$('#box-1.box').on('click', function(event) {
+$('#box-1').on('click', function(event) {
     if (!$(event.target).hasClass("dimmed")) {
+        clearScreen();
         $("#box-2, #box-3, #box-4, #box-5").toggleClass("dimmed");
-        $(".snow-screen").children().remove();
         $("#viewer-screen").toggleClass("snow-screen about");
     about();
+    } else {
     }
 })
 
 $("#box-2").on('click', function(event) {
     if (!$(event.target).hasClass("dimmed")) {
         $("#box-1, #box-3, #box-4, #box-5").toggleClass("dimmed");
-        $(".snow-screen").children().remove();
+        clearScreen();
         $("#viewer-screen").toggleClass("snow-screen languages");
         languages();
     }
@@ -97,7 +105,7 @@ $("#box-2").on('click', function(event) {
 $("#box-3").on('click', function(event) {
     if (!$(event.target).hasClass("dimmed")) {
         $("#box-1, #box-2, #box-4, #box-5").toggleClass("dimmed");
-        $(".snow-screen").children().remove();
+        clearScreen();
         $("#viewer-screen").toggleClass("snow-screen portfolio");
         portfolio();
     }
@@ -106,7 +114,7 @@ $("#box-3").on('click', function(event) {
 $("#box-4").on('click', function(event) {
     if (!$(event.target).hasClass("dimmed")) {
     $("#box-1, #box-2, #box-3, #box-5").toggleClass("dimmed");
-    $(".snow-screen").children().remove();
+    clearScreen();
     $("#viewer-screen").toggleClass("snow-screen accolades");
     accolades();
     }
@@ -115,7 +123,7 @@ $("#box-4").on('click', function(event) {
 $("#box-5").on('click', function(event) {
     if (!$(event.target).hasClass("dimmed")) {
         $("#box-1, #box-2, #box-3, #box-4").toggleClass("dimmed");
-        $(".snow-screen").children().remove();
+        clearScreen();
         $("#viewer-screen").toggleClass("snow-screen for_fun");
         forFun();
     }

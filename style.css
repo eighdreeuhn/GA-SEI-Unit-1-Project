@@ -62,7 +62,7 @@ header h3 {
     opacity: 90%;
 }
 header nav {
-    display: none;
+    /* display: none; */
 }
 
 #box-wrapper {
@@ -80,7 +80,6 @@ header nav {
 #viewer-screen {
     display: grid;
     grid-area: 2 / 2 / 10 / 10;
-    color: rgb(13, 13, 12);
 }
 
 .snow-screen {
@@ -91,7 +90,7 @@ header nav {
 
 div#viewer-screen.about {
     display: grid;
-    grid-template: 1fr/ 2fr 1fr;
+    grid-template: 1fr/ 75% 1fr;
     background-image: url("Project-images/20200624_174747.jpg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -103,13 +102,16 @@ div#viewer-screen.about {
 }
 
 .languages {
-    background-color: rgb(6, 96, 175);
+    grid-template-rows: repeat(5, 1fr);
+    background-color: rgb(6, 59, 105);
+    color: white;
     text-align: center;
     animation: fadein 2000ms;
 }
 
 .portfolio {
     display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
     background-color: aliceblue;
     animation: fadein 2000ms;
 }
@@ -154,6 +156,10 @@ div#viewer-screen.about {
 }
 #box-3 {
     grid-area: 11 / 8 / 13 / 10;
+}
+
+#box-3 img {
+    max-width: 100%;
 }
 
 #box-4 {

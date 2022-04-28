@@ -87,7 +87,7 @@ header nav {
 .snow-screen {
     display: grid;
     grid-template: repeat(24, 1fr) / repeat(24, 1fr);
-    animation: fadein 2000ms;
+    animation: fadein 3000ms;
 }
 
 div#viewer-screen.about {

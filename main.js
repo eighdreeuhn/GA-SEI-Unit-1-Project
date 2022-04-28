@@ -100,7 +100,7 @@ $('#box-1').on('click', function(event) {
     console.log($(event.target).hasClass("dimmed"));
     if (!$(event.target).hasClass("dimmed")) {
         clearScreen();
-        $("#box-2").toggleClass("dimmed");
+        $("#box-2, #box-3, #box-4, #box-5").toggleClass("dimmed");
         console.log($("#box-2").hasClass("dimmed"))
         $("#viewer-screen").toggleClass("about snow-screen");
     about();
@@ -111,7 +111,7 @@ $('#box-1').on('click', function(event) {
 $("#box-2").on('click', function(event) {
     console.log($(event.target).hasClass("dimmed"));
     if (!$(event.target).hasClass("dimmed")) {
-        $("#box-1").toggleClass("dimmed");
+        $("#box-1, #box-3, #box-4, #box-5").toggleClass("dimmed");
         console.log($("#box-1").hasClass("dimmed"))
         $("#viewer-screen").toggleClass("languages snow-screen");
         clearScreen();

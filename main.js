@@ -44,14 +44,22 @@ const static = function() {
 const about = function() {
     // const aboutData = getContent();
     // const aboutText = aboutData[1];
-    $(".blinker").text("about/");
+    if (clicked === true) {
+        $(".blinker").text("about/");
+    } else {
+        $(".blinker").text("loading/");
+    }
     $("div #viewer-screen.about").append("<p>");
     $("div #viewer-screen.about p").css('grid-column-area')
     $("div #viewer-screen.about p").text("I wrote my first program on a TI-82 graphing calculator and have been fascinated by programming languages and design ever since. Collaborative, driven, and comitted to doing great work. I'm a life-long learner in search of a great organization. I'd love to talk to you!");
 }
 
 const languages = function() {
-    $(".blinker").text("languages/");
+    if (clicked === true) {
+        $(".blinker").text("languages/");
+    } else {
+        $(".blinker").text("loading/");
+    }
     $("div #viewer-screen.languages").append("<div><h3>LANGUAGES</h3></div>");
     $("div #viewer-screen.languages").append("<div><h2>~TYPED~</h2></div>");
     $("div #viewer-screen.languages").append("<div><h2>HTML  CSS  JavaScript JQuery</h2></div>");
@@ -60,6 +68,11 @@ const languages = function() {
 }
 
 const portfolio = function() {
+    if (clicked === true) {
+        $(".blinker").text("portfolio/");
+    } else {
+        $(".blinker").text("loading/");
+    }
     $("div #viewer-screen.portfolio").append("<div><h3>GA SEI Project-1</h3></div>");
     $("div #viewer-screen.portfolio").append("<div><h3>GA SEI Project-2</h3></div>");
     $("div #viewer-screen.portfolio").append("<div><h3>GA SEI Project-3</h3></div>");
@@ -67,6 +80,11 @@ const portfolio = function() {
 }
 
 const accolades = function() {
+    if (clicked === true) {
+        $(".blinker").text("skills/");
+    } else {
+        $(".blinker").text("loading/");
+    }
     $("div #viewer-screen.accolades").append('<div><h4>Insightful problem-solving skills</h4></div>');
     $("div #viewer-screen.accolades").append('<div><h4>Years of experience working in and leading teams</h4></div>');
     $("div #viewer-screen.accolades").append('<div><h4>Gutenberg Coding Society Developer of the year - ca. 1673</h4></div>');
@@ -80,6 +98,11 @@ const buildBoard = function() {
 
 
 const forFun = function() {
+    if (clicked === true) {
+        $(".blinker").text("fun_time/");
+    } else {
+        $(".blinker").text("loading/");
+    }
     $("div #viewer-screen.for_fun").append("<button id='reset-button'>");
     $("div #viewer-screen.for_fun").append("<div id='game-box'>");
     $("div #viewer-screen.for_fun button").css("grid-area", "1 / 3 / 1 / 5")
@@ -96,7 +119,17 @@ const clearScreen = function() {
     $(".snow-screen").children().remove();
 }
 
+let clicked = false;
+
 // Eventlisteners built here:
+$(".box").on('click', function() {
+    if (clicked === false) {
+        clicked = true;
+    } else {
+        clicked = false;
+    }
+})
+
 
 $('#box-1').on('click', function(event) {
     console.log($(event.target).hasClass("dimmed"));

@@ -1,13 +1,27 @@
+@keyframes fadein {
+    
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+  }
+  
+@keyframes blinker {
+    0% {opacity: 0%}
+  
+    50% {opacity: 100%}
+
+    100% {opacity: 0%}
+  }
+
 body {
     background-color:rgb(13, 13, 12);
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto auto;
     width: 100%;
 }
 
 header {
     display: grid;
-    width: 85%;
+    width: 100%;
     margin-top: 5px;
     color: rgb(254, 254, 254);
     
@@ -19,17 +33,11 @@ header #name {
     border: 2px solid rgb(255, 78, 78);
 }
 
-header h2 {
+header h3 {
     margin: 10px auto 5px 20px;
 }
 
-@keyframes blinker {
-    0% {opacity: 0%}
-  
-    50% {opacity: 100%}
 
-    100% {opacity: 0%}
-  }
 
 .blinker {
     animation: blinker 900ms infinite;
@@ -66,90 +74,102 @@ header nav {
     width: 425px;
     margin: 25px auto 25px auto;
     gap: 10px;
+    animation: fadein 3000ms;
 }
 
-.viewer-screen {
+#viewer-screen {
     display: grid;
-    background-color:rgb(254, 254, 254);
+    grid-area: 2 / 2 / 10 / 10;
+    color: rgb(13, 13, 12);
 }
 
-@keyframes dimmer {
-    
-    0% {opacity: 100%;}
-    50% {opacity: 40%;}
-    100% {opacity: 20%;}
-  }
-
-.viewer-screen > p {
-    font-size: 20px;
-    padding: 10px;
-}
-
-div #box-6.snow-screen {
+.snow-screen {
     display: grid;
     grid-template: repeat(24, 1fr) / repeat(24, 1fr);
+    animation: fadein 2000ms;
 }
 
-div #box-6.about {
-    background-image: url('Heiroglyphics_face.jpg');
+div#viewer-screen.about {
+    display: grid;
+    grid-template: 1fr/ 2fr 1fr;
+    background-image: url("Project-images/20200624_174747.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fadein 2000ms;
 }
-.box {
-    border: 2px solid rgb(154, 29, 29);
-    background-color: rgb(225, 241, 218);
+
+.about p {
+    margin-left: 1em;
+}
+
+.languages {
+    background-color: rgb(6, 96, 175);
     text-align: center;
-    color: rgb(13, 13, 12);
-    border-radius: 50%;
+    animation: fadein 2000ms;
+}
+
+.portfolio {
+    display: grid;
+    background-color: aliceblue;
+    animation: fadein 2000ms;
+}
+
+.accolades {
+    background-color: aliceblue;
+    animation: fadein 2000ms;
+}
+
+.for_fun {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    background-color: rgb(34, 0, 20);
+    animation: fadein 2000ms;
+}
+
+.box {
     cursor: pointer;
 }
 
 .dimmed {
-    border: 2px solid rgb(255, 78, 78);
-    background-color: rgb(123, 128, 121);
     opacity: 20%;
-    text-align: center;
     color: rgb(13, 13, 12);
-    border-radius: 7%;
     cursor: none;
 }
 
-@keyframes fadein {
-    
-    0% {opacity: 0%;}
-    100% {opacity: 100%;}
-  }
+
   
 
 #box-1 {
     grid-area: 11 / 2 / 13 / 4;
-    animation: fadein 1000ms;
     
 }
 
 #box-2 {
     grid-area: 11 / 5 / 13 / 7;
-    animation: fadein 1200ms;
 }
 
+#box-2 img {
+    max-width: 100%;
+}
 #box-3 {
     grid-area: 11 / 8 / 13 / 10;
-    animation: fadein 1400ms;
 }
 
 #box-4 {
     grid-area: 13 / 3 / 15 / 5;
-    animation: fadein 1600ms;
 }
 
 #box-5 {
     grid-area: 13 / 7 / 15 / 9;
-    animation: fadein 1800ms;
 }
 
-#box-6 {
-    grid-area: 2 / 2 / 10 / 10;
-    text-align: center;
-    color: rgb(13, 13, 12);
-    animation: fadein 2000ms;
+#box-5 img {
+    max-width: 100%;
+}
+#portfolio {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr)
 }
 
 footer  {
@@ -212,6 +232,10 @@ footer span {
 
 @media screen and (min-width: 426px) {
     
+    h3 {
+        font-size: 3em;
+    }
+
     #social {
         display: none;
      }
@@ -222,10 +246,11 @@ footer span {
 }
 @media screen and (min-width: 768px) {
     
-    header {
-        grid-template-columns: 2fr 1fr;
-    }
     header #name {
+        display: flex;
+    }
+
+    nav {
         display: flex;
     }
 
@@ -249,34 +274,27 @@ footer span {
         gap: 25px;
     }
 
+    #viewer-screen {
+        grid-area: 1 / 6 / 9 / 14;
+    }
 
     #box-1 {
         grid-area: 2 / 2 / 4 / 4;
-        animation: fadein 1000ms;
     }
     
     #box-2 {
         grid-area: 2 / 4 / 4 / 6;
-        animation: fadein 1200ms;
     }
     
     #box-3 {
         grid-area: 4 / 2 / 6 / 4;
-        animation: fadein 1400ms;
     }
     
     #box-4 {
         grid-area: 4 / 4 / 6 / 6;
-        animation: fadein 1600ms;
     }
     
     #box-5 {
         grid-area: 6 / 3 / 8 / 5;
-        animation: fadein 2000ms;
-    }
-    
-    #box-6 {
-        grid-area: 1 / 6 / 9 / 14;
-        animation: fadein 1800ms;
     }
 }

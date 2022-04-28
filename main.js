@@ -38,7 +38,7 @@ const generatePixel = function() {
 }
 
 const static = function() {
-    setInterval(snowScreen, 200);
+    setInterval(snowScreen, 150);
 }
 
 const about = function() {
@@ -65,7 +65,9 @@ const portfolio = function() {
 }
 
 const accolades = function() {
-
+    $("div #viewer-screen.accolades").append('<div><h4>Gutenberg Coding Society Developer of the year - ca. 1673</h4></div>');
+    $("div #viewer-screen.accolades").append(`<div><h4>"Adrian's work has never killed anyone... that I know of." - sastified customer</h4></div>`);
+    $("div #viewer-screen.accolades").append("<div><h4>404</h4></div>");
 }
 
 const buildBoard = function() {

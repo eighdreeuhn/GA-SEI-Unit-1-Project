@@ -119,11 +119,14 @@ div#viewer-screen.about {
     text-align: center;
     background-color: rgb(6, 59, 105);
     color: white;
+    padding-top: 1em;
     animation: fadein 2000ms;
 }
 
 .accolades {
-    background-color: aliceblue;
+    background-color: rgb(6, 59, 105);
+    text-align: center;
+    color: white;
     animation: fadein 2000ms;
 }
 
@@ -170,6 +173,10 @@ div#viewer-screen.about {
 
 #box-4 {
     grid-area: 13 / 3 / 15 / 5;
+}
+
+#box-4 img {
+    max-width: 100%;
 }
 
 #box-5 {
@@ -253,7 +260,9 @@ footer span {
         padding: 8px;
         margin-left: 1em;
     }
-
+    .accolades {
+        font-size: 1.5em;
+    }
     #social {
         display: none;
      }

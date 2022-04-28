@@ -51,9 +51,9 @@ const about = function() {
 
 const languages = function() {
     $("div #viewer-screen.languages").append("<div><h3>LANGUAGES</h3></div>");
-    $("div #viewer-screen.languages").append("<div><h2>:TYPED:</h2></div>");
-    $("div #viewer-screen.languages").append("<div><h2>HTML  CSS  JavaScript/$JQuery</h2></div>");
-    $("div #viewer-screen.languages").append("<div><h2>:SPOKEN:</h2></div>");
+    $("div #viewer-screen.languages").append("<div><h2>~TYPED~</h2></div>");
+    $("div #viewer-screen.languages").append("<div><h2>HTML  CSS  JavaScript JQuery</h2></div>");
+    $("div #viewer-screen.languages").append("<div><h2>~SPOKEN~</h2></div>");
     $("div #viewer-screen.languages").append("<div><h2>Espanol, Italiano, 日本語</h2></div>");
 }
 
@@ -65,19 +65,15 @@ const portfolio = function() {
 }
 
 const accolades = function() {
+    $("div #viewer-screen.accolades").append('<div><h4>Insightful problem-solving skills</h4></div>');
+    $("div #viewer-screen.accolades").append('<div><h4>Years of experience working in and leading teams</h4></div>');
     $("div #viewer-screen.accolades").append('<div><h4>Gutenberg Coding Society Developer of the year - ca. 1673</h4></div>');
-    $("div #viewer-screen.accolades").append(`<div><h4>"Adrian's work has never killed anyone... that I know of." - sastified customer</h4></div>`);
+    $("div #viewer-screen.accolades").append(`<div><h4>"Adrian's code has never killed anyone... that I know of." - sastified customer</h4></div>`);
     $("div #viewer-screen.accolades").append("<div><h4>404</h4></div>");
 }
 
 const buildBoard = function() {
-    let numbers = [];
-    for (let i = 1; i <= 4; i++) {
-        for (let j = 1; j <= 4; j++) {
-            numbers.push([i,j]);
-        }
-    }
-    // while (numbers.length !== 0)
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
 }
 
 
@@ -89,30 +85,36 @@ const forFun = function() {
     $("div #viewer-screen.for_fun #game-box").css("grid-area", "2 / 2 / 6 / 6");
     $("div #viewer-screen.for_fun #game-box").css("display", "grid")
     $("div #viewer-screen.for_fun #game-box").css("grid-template", "repeat(4, 1fr) / repeat(4, 1fr");
+    $("div #viewer-screen.for_fun #game-box").css("background-color", "lightgray");
     buildBoard();
 }
 
 const clearScreen = function() {
-    $(".snow-screen, viewer-screen").children().remove();
+    $("#viewer-screen").children().remove();
+    $(".snow-screen").children().remove();
 }
 
 // Eventlisteners built here:
 
 $('#box-1').on('click', function(event) {
+    console.log($(event.target).hasClass("dimmed"));
     if (!$(event.target).hasClass("dimmed")) {
         clearScreen();
-        $("#box-2, #box-3, #box-4, #box-5").toggleClass("dimmed");
-        $("#viewer-screen").toggleClass("snow-screen about");
+        $("#box-2").toggleClass("dimmed");
+        console.log($("#box-2").hasClass("dimmed"))
+        $("#viewer-screen").toggleClass("about snow-screen");
     about();
     } else {
     }
 })
 
 $("#box-2").on('click', function(event) {
+    console.log($(event.target).hasClass("dimmed"));
     if (!$(event.target).hasClass("dimmed")) {
-        $("#box-1, #box-3, #box-4, #box-5").toggleClass("dimmed");
+        $("#box-1").toggleClass("dimmed");
+        console.log($("#box-1").hasClass("dimmed"))
+        $("#viewer-screen").toggleClass("languages snow-screen");
         clearScreen();
-        $("#viewer-screen").toggleClass("snow-screen languages");
         languages();
     }
 })
@@ -120,8 +122,8 @@ $("#box-2").on('click', function(event) {
 $("#box-3").on('click', function(event) {
     if (!$(event.target).hasClass("dimmed")) {
         $("#box-1, #box-2, #box-4, #box-5").toggleClass("dimmed");
-        clearScreen();
         $("#viewer-screen").toggleClass("snow-screen portfolio");
+        clearScreen();
         portfolio();
     }
 })

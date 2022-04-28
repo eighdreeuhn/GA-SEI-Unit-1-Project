@@ -7,12 +7,13 @@
 @keyframes blinker {
     0% {opacity: 0%}
   
-    50% {opacity: 100%}
+    50% {opacity: 25%}
 
     100% {opacity: 0%}
   }
 
 body {
+    font-family: Arial, Helvetica, sans-serif;
     background-color:rgb(13, 13, 12);
     display: grid;
     grid-template-rows: auto auto auto auto;
@@ -39,7 +40,8 @@ header h3 {
 
 
 
-.blinker {
+span.blinker {
+    display: inline;
     animation: blinker 900ms infinite;
 }
 
@@ -90,7 +92,7 @@ header nav {
 
 div#viewer-screen.about {
     display: grid;
-    grid-template: 1fr/ 75% 1fr;
+    grid-template: 1fr/ 72% 1fr;
     background-image: url("Project-images/20200624_174747.jpg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -98,10 +100,12 @@ div#viewer-screen.about {
 }
 
 .about p {
+    font-size: .9em;
     margin-left: 1em;
 }
 
 .languages {
+    font-size: .8em;
     grid-template-rows: repeat(5, 1fr);
     background-color: rgb(6, 59, 105);
     color: white;
@@ -112,7 +116,9 @@ div#viewer-screen.about {
 .portfolio {
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr;
-    background-color: aliceblue;
+    text-align: center;
+    background-color: rgb(6, 59, 105);
+    color: white;
     animation: fadein 2000ms;
 }
 
@@ -125,7 +131,7 @@ div#viewer-screen.about {
     display: grid;
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(6, 1fr);
-    background-color: rgb(34, 0, 20);
+    background-color: rgb(6, 59, 105);
     animation: fadein 2000ms;
 }
 
@@ -175,7 +181,7 @@ div#viewer-screen.about {
 }
 #portfolio {
     display: grid;
-    grid-template: repeat(3, 1fr) / repeat(3, 1fr)
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr)
 }
 
 footer  {
@@ -240,6 +246,12 @@ footer span {
     
     h3 {
         font-size: 3em;
+    }
+
+    .about p {
+        font-size: 1.5em;
+        padding: 8px;
+        margin-left: 1em;
     }
 
     #social {

@@ -44,12 +44,14 @@ const static = function() {
 const about = function() {
     // const aboutData = getContent();
     // const aboutText = aboutData[1];
+    $(".blinker").text("about/");
     $("div #viewer-screen.about").append("<p>");
     $("div #viewer-screen.about p").css('grid-column-area')
     $("div #viewer-screen.about p").text("I wrote my first program on a TI-82 graphing calculator and have been fascinated by programming languages and design ever since. Collaborative, driven, and comitted to doing great work. I'm a life-long learner in search of a great organization. I'd love to talk to you!");
 }
 
 const languages = function() {
+    $(".blinker").text("languages/");
     $("div #viewer-screen.languages").append("<div><h3>LANGUAGES</h3></div>");
     $("div #viewer-screen.languages").append("<div><h2>~TYPED~</h2></div>");
     $("div #viewer-screen.languages").append("<div><h2>HTML  CSS  JavaScript JQuery</h2></div>");
@@ -149,6 +151,7 @@ $("#box-5").on('click', function(event) {
  $("#message").on('click',  function() {
     // $("#contact-sheet, #contact-sheet img").toggleClass(" hidden shown");
     $("#box-wrapper").toggleClass("dimmed");
+
  })
 
 $('#box-1.box').on('hover', function(event) {

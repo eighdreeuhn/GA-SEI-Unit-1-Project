@@ -128,7 +128,6 @@ div#viewer-screen.portfolio {
 div#viewer-screen.accolades {
     background-color: rgb(6, 59, 105);
     text-align: center;
-    padding: 0 2em;
     color: white;
     animation: fadein 2000ms;
 }

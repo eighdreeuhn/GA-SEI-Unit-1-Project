@@ -93,7 +93,8 @@ const accolades = function() {
 }
 
 const buildBoard = function() {
-    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+
 }
 
 
@@ -132,6 +133,7 @@ $(".box").on('click', function() {
 
 
 $('#box-1').on('click', function(event) {
+    event.preventDefault();
     console.log($(event.target).hasClass("dimmed"));
     if (!$(event.target).hasClass("dimmed")) {
         clearScreen();
@@ -144,6 +146,7 @@ $('#box-1').on('click', function(event) {
 })
 
 $("#box-2").on('click', function(event) {
+    event.preventDefault();
     console.log($(event.target).hasClass("dimmed"));
     if (!$(event.target).hasClass("dimmed")) {
         $("#box-1, #box-3, #box-4, #box-5").toggleClass("dimmed");
@@ -155,6 +158,7 @@ $("#box-2").on('click', function(event) {
 })
 
 $("#box-3").on('click', function(event) {
+    event.preventDefault();
     if (!$(event.target).hasClass("dimmed")) {
         $("#box-1, #box-2, #box-4, #box-5").toggleClass("dimmed");
         $("#viewer-screen").toggleClass("snow-screen portfolio");
@@ -164,6 +168,7 @@ $("#box-3").on('click', function(event) {
 })
 
 $("#box-4").on('click', function(event) {
+    event.preventDefault();
     if (!$(event.target).hasClass("dimmed")) {
     $("#box-1, #box-2, #box-3, #box-5").toggleClass("dimmed");
     clearScreen();
@@ -173,6 +178,7 @@ $("#box-4").on('click', function(event) {
 })
 
 $("#box-5").on('click', function(event) {
+    event.preventDefault();
     if (!$(event.target).hasClass("dimmed")) {
         $("#box-1, #box-2, #box-3, #box-4").toggleClass("dimmed");
         clearScreen();
@@ -182,12 +188,14 @@ $("#box-5").on('click', function(event) {
  })
 
  $("#message").on('click',  function() {
+    event.preventDefault();
     // $("#contact-sheet, #contact-sheet img").toggleClass(" hidden shown");
     $("#box-wrapper").toggleClass("dimmed");
 
  })
 
 $('#box-1.box').on('hover', function(event) {
+    event.preventDefault();
         $(event.target).text('About');
 })
 

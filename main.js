@@ -1,25 +1,3 @@
-//All functions declared here in the header
-// const link = 'https://docs.google.com/spreadsheets/d/11RXPA6fh2GQCeni-7yy4OqrKXia3HE1ScoOFRFssPZk/edit#gid=0"'
-
-// const key = 'AIzaSyD5gvCmsvh1nSoAND0u0MN5FO-e-gdrHtk'
-
-// const id = "11RXPA6fh2GQCeni-7yy4OqrKXia3HE1ScoOFRFssPZk";
-
-// let url = `https://sheets.googleapis.com/v4/spreadsheets/11RXPA6fh2GQCeni-7yy4OqrKXia3HE1ScoOFRFssPZk/values/A1:B1?key=${key}`
-
-// const getContent = function() {
-// $.ajax({
-//     method: "get",
-//     url: url
-// })
-// .then(function(data) {
-//     return data.values[0];
-// })
-// .catch(function() {
-//     console.log("nope");
-// })
-// }
-
 //Removes all .pixel children from .snow-screen div and generates a grayscale pixelated screen
 const snowScreen = function() {
     $(".snow-screen").children().remove();
@@ -42,8 +20,6 @@ const static = function() {
 }
 
 const about = function() {
-    // const aboutData = getContent();
-    // const aboutText = aboutData[1];
     if (clicked === true) {
         $(".blinker").text("about/");
     } else {
@@ -135,20 +111,19 @@ $(".box").on('click', function() {
 $('#box-1').on('click', function(event) {
     event.preventDefault();
     console.log($(event.target).hasClass("dimmed"));
-    if (!$(event.target).hasClass("dimmed")) {
-        clearScreen();
+    if (!$(event.target).parent().hasClass("dimmed")) {
         $("#box-2, #box-3, #box-4, #box-5").toggleClass("dimmed");
         console.log($("#box-2").hasClass("dimmed"))
         $("#viewer-screen").toggleClass("about snow-screen");
-    about();
-    } else {
+        clearScreen();
+        about();
     }
 })
 
 $("#box-2").on('click', function(event) {
     event.preventDefault();
-    console.log($(event.target).hasClass("dimmed"));
-    if (!$(event.target).hasClass("dimmed")) {
+    console.log($(event.target).parent().hasClass("dimmed"));
+    if (!$(event.target).parent().hasClass("dimmed")) {
         $("#box-1, #box-3, #box-4, #box-5").toggleClass("dimmed");
         console.log($("#box-1").hasClass("dimmed"))
         $("#viewer-screen").toggleClass("languages snow-screen");
@@ -159,7 +134,7 @@ $("#box-2").on('click', function(event) {
 
 $("#box-3").on('click', function(event) {
     event.preventDefault();
-    if (!$(event.target).hasClass("dimmed")) {
+    if (!$(event.target).parent().hasClass("dimmed")) {
         $("#box-1, #box-2, #box-4, #box-5").toggleClass("dimmed");
         $("#viewer-screen").toggleClass("snow-screen portfolio");
         clearScreen();
@@ -169,26 +144,26 @@ $("#box-3").on('click', function(event) {
 
 $("#box-4").on('click', function(event) {
     event.preventDefault();
-    if (!$(event.target).hasClass("dimmed")) {
+    if (!$(event.target).parent().hasClass("dimmed")) {
     $("#box-1, #box-2, #box-3, #box-5").toggleClass("dimmed");
-    clearScreen();
     $("#viewer-screen").toggleClass("snow-screen accolades");
+    clearScreen();
     accolades();
     }
 })
 
 $("#box-5").on('click', function(event) {
     event.preventDefault();
-    if (!$(event.target).hasClass("dimmed")) {
+    if (!$(event.target).parent().hasClass("dimmed")) {
         $("#box-1, #box-2, #box-3, #box-4").toggleClass("dimmed");
-        clearScreen();
         $("#viewer-screen").toggleClass("snow-screen for_fun");
+        clearScreen();
         forFun();
     }
  })
 
- $("#message").on('click',  function() {
-    event.preventDefault();
+ $("#message").on('click',  function(event) {
+    (event).preventDefault();
     // $("#contact-sheet, #contact-sheet img").toggleClass(" hidden shown");
     $("#box-wrapper").toggleClass("dimmed");
 

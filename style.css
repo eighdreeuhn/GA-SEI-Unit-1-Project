@@ -191,8 +191,9 @@ div#viewer-screen.for_fun {
 #portfolio {
     display: grid;
     grid-row: 3 / 4;
-    height: 4em;
+    height: 10em;
     grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    text-align: center;
     color: white;
     margin: 0 2em;
 }

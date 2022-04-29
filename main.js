@@ -122,10 +122,8 @@ $('#box-1').on('click', function(event) {
 
 $("#box-2").on('click', function(event) {
     event.preventDefault();
-    console.log($(event.target).parent().hasClass("dimmed"));
     if (!$(event.target).parent().hasClass("dimmed")) {
         $("#box-1, #box-3, #box-4, #box-5").toggleClass("dimmed");
-        console.log($("#box-1").hasClass("dimmed"))
         $("#viewer-screen").toggleClass("languages snow-screen");
         clearScreen();
         languages();

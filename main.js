@@ -16,7 +16,9 @@ const generatePixel = function() {
 }
 
 const static = function() {
-    setInterval(snowScreen, 150);
+    if (clicked === false) {
+        setInterval(snowScreen, 150);
+    }
 }
 
 const about = function() {

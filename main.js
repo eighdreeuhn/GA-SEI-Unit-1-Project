@@ -51,7 +51,7 @@ const portfolio = function() {
     } else {
         $(".blinker").text("loading/");
     }
-    $("div #viewer-screen.portfolio").append("<div><h3>GA SEI Project-1</h3></div>");
+    $("div #viewer-screen.portfolio").append("<div .project-1></div>");
     $("div #viewer-screen.portfolio").append("<div><h3>GA SEI Project-2</h3></div>");
     $("div #viewer-screen.portfolio").append("<div><h3>GA SEI Project-3</h3></div>");
     $("div #viewer-screen.portfolio").append("<div><h3>GA SEI Project-4</h3></div>");

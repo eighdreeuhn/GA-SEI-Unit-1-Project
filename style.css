@@ -199,6 +199,10 @@ div#viewer-screen.for_fun {
     margin: 2em 2em;
 }
 
+.project-1 {
+    background-image: url("Project-images/Screen Shot 2022-05-24 at 9.47.26 AM.png");
+}
+
 footer  {
 
     display: grid;
